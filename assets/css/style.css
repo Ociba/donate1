@@ -3091,7 +3091,7 @@ Boxes CSS
 
 .single-boxes-item.bg-image {
   background-color: #3F26BF;
-  background-image: url(../img/mission-bg.jpg);
+  background-image: url(../img/mine/comp1.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6228,7 +6228,7 @@ Courses Details CSS
   position: relative;
   border-radius: 5px;
   z-index: 1;
-  background-image: url(../img/mission-bg.jpg);
+  background-image: url(../img/mine/comp1.png );
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -12299,7 +12299,7 @@ Contact CSS
 }
 
 #contactForm .default-btn {
-  border-radius: 30px;
+  /*border-radius: 30px;*/
   margin-top: 10px;
   -webkit-box-shadow: 0 5px 28.5px 1.5px rgba(255, 25, 73, 0.2);
           box-shadow: 0 5px 28.5px 1.5px rgba(255, 25, 73, 0.2);
