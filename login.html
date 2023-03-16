@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="zxx" class="theme-light">
-    
-<!-- Mirrored from templates.envytheme.com/raque/default/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 May 2022 10:13:41 GMT -->
 <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -24,9 +22,9 @@
         <link rel="stylesheet" href="assets/css/dark.css">
         <link rel="stylesheet" href="assets/css/responsive.css">
 
-        <title>Raque - Education & Online Courses HTML Template</title>
+        <title>Joome Support- Computer,Music & Sports</title>
 
-        <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <link rel="icon" type="image/png" href="assets/img/partner/11.png">
     </head>
 
     <body>
@@ -45,7 +43,7 @@
             <div class="row m-0">
                 <div class="col-lg-6 col-md-12 p-0">
                     <div class="login-image">
-                        <img src="assets/img/login-bg.jpg" alt="image">
+                        <img src="assets/img/mine/tg10.jpg" alt="image">
                     </div>
                 </div>
 
@@ -55,27 +53,41 @@
                             <div class="d-table-cell">
                                 <div class="login-form">
                                     <div class="logo">
-                                        <a href="index.html"><img src="assets/img/black-logo.png" class="black-logo" alt="image"></a>
-                                        <a href="index.html"><img src="assets/img/logo.png" class="white-logo" alt="image"></a>
+                                        <a href="index.html"><img src="assets/img/partner/11.png" class="black-logo" alt="image"></a>
+                                        <a href="index.html"><img src="assets/img/partner/11.png" class="white-logo" alt="image"></a>
                                     </div>
 
                                     <h3>Welcome back</h3>
-                                    <p>New to Raque? <a href="register.html">Sign up</a></p>
+                                    <p>New to Joome Support Organization? <a href="register.html"><span style="color: blue;;">Sign up</span></a></p>
 
-                                    <form>
+                                    <form action="http://localhost:8000/login" method="POST">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="email" placeholder="Your email address" class="form-control">
+                                            <input id="email" type="email" placeholder="Your email address" class="form-control" name="email" :value="old('email')" required>
                                         </div>
 
                                         <div class="form-group">
-                                            <input type="password" placeholder="Your password" class="form-control">
+                                            <input id="password" type="password" placeholder="Your password" class="form-control"  name="password" required autocomplete="current-password">
                                         </div>
 
                                         <button type="submit">Login</button>
-                                        
-                                        <div class="forgot-password">
-                                            <a href="#">Forgot Password?</a>
+                                        <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group mt-4">
+                                                <div class="form-check">
+                                                    <input type="checkbox" class="form-check-input" id="remember_me" name="remember">
+                                                    <label class="form-check-label" for="create-an-account">Remember me</label>
+                                                </div>
+                                            </div>
                                         </div>
+                                        <div class="col-lg-6">
+                                        <div class="forgot-password">
+                                            @if (Route::has('password.request'))
+                                            <a href="{{ route('password.request') }}">Forgot Password?</a>
+                                            @endif
+                                        </div>
+                                    </div>
+                                    </div>
 
                                         <div class="connect-with-social">
                                             <button type="submit" class="facebook"><i class='bx bxl-facebook'></i> Connect with Facebook</button>
@@ -119,6 +131,4 @@
         <script src="assets/js/contact-form-script.js"></script>
         <script src="assets/js/main.js"></script>
     </body>
-
-<!-- Mirrored from templates.envytheme.com/raque/default/login.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 04 May 2022 10:13:41 GMT -->
 </html>
